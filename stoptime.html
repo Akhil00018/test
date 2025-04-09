@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            #start{
+                display: flex
+                text-align:center;
+                border-radius: 10px;
+                width: 150px;
+                font-weight: bold;
+                cursor: pointer;
+                justify-content: center;
+            
+            }
+            #stop{
+                text-align:center;
+                border-radius: 10px;
+                width: 150px;
+                font-wight: bold;
+                cursor: pointer;
+                position: center;
+            }
+        </style>
+    </head>
+<body>
+<script>
+  /*  let timer;
+    function f1()
+    {
+       timer=setTimeout(window.alert("hello my friend"),123454567) 
+    }
+*/
+
+    let timer;
+function f1() {
+   timer = setTimeout(() => {
+      window.alert("hello my friend");
+   }, 3000); // 3 seconds delay
+}
+
+function f2() {
+   clearTimeout(timer); // Stops the timer if running
+}
+
+</script>
+
+    <div style="text-align: center;">
+    <input type="submit" id="start"  onclick="f1()" value="start">
+    <input type="submit" id="stop" onclick="f2()" value="stop"></div>
+</body>
+
+
+</html>
